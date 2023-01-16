@@ -35,6 +35,10 @@ const renderPokemon = async (pokemon) => {
         pokemonSprite.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default']
         pokemonSprite.alt = data.name
 
+        if(data.id > 649){
+            pokemonSprite.src = data['sprites']['front_default']
+        }
+
         searchPokemon = data.id
     
         search.value = ''
