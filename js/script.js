@@ -28,6 +28,7 @@ const renderPokemon = async (pokemon) => {
 
     if(data){
         pokemonSprite.style.display = 'block'
+        pokemonSprite.style.height = '18%'
 
         pokemonName.innerHTML = data.name
         pokemonNumber.innerHTML = data.id
@@ -37,6 +38,8 @@ const renderPokemon = async (pokemon) => {
 
         if(data.id > 649){
             pokemonSprite.src = data['sprites']['front_default']
+
+            pokemonSprite.style.height = '21%'
         }
 
         searchPokemon = data.id
